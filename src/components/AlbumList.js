@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import AlbumDetail from './AlbumDetail';
 
 const fetch = require('node-fetch');
@@ -16,11 +16,7 @@ class AlbumList extends Component {
   }
   render() {
     console.log(this.state);
-    return (
-      <View>
-        {this.renderAlbums()}
-      </View>
-    );
+    return <ScrollView>{this.renderAlbums()}</ScrollView>;
   }
 }
 export default AlbumList;
